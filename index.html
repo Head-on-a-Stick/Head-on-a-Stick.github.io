@@ -1,161 +1,46 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta http-equiv='content-type' value='text/html;charset=utf8'>
-  <meta name='generator' value='Ronn/v0.7.3 (http://github.com/rtomayko/ronn/tree/0.7.3)'>
-  <title>BunsenLabs(7) - A light-weight and easily customizable GNU/Linux distribution based on the Openbox window manager.</title>
-  <style type='text/css' media='all'>
-  /* style: man */
-  body#manpage {margin:0}
-  .mp {max-width:100ex;padding:0 9ex 1ex 4ex}
-  .mp p,.mp pre,.mp ul,.mp ol,.mp dl {margin:0 0 20px 0}
-  .mp h2 {margin:10px 0 0 0}
-  .mp > p,.mp > pre,.mp > ul,.mp > ol,.mp > dl {margin-left:8ex}
-  .mp h3 {margin:0 0 0 4ex}
-  .mp dt {margin:0;clear:left}
-  .mp dt.flush {float:left;width:8ex}
-  .mp dd {margin:0 0 0 9ex}
-  .mp h1,.mp h2,.mp h3,.mp h4 {clear:left}
-  .mp pre {margin-bottom:20px}
-  .mp pre+h2,.mp pre+h3 {margin-top:22px}
-  .mp h2+pre,.mp h3+pre {margin-top:5px}
-  .mp img {display:block;margin:auto}
-  .mp h1.man-title {display:none}
-  .mp,.mp code,.mp pre,.mp tt,.mp kbd,.mp samp,.mp h3,.mp h4 {font-family:monospace;font-size:14px;line-height:1.42857142857143}
-  .mp h2 {font-size:16px;line-height:1.25}
-  .mp h1 {font-size:20px;line-height:2}
-  .mp {text-align:justify;background:#fff}
-  .mp,.mp code,.mp pre,.mp pre code,.mp tt,.mp kbd,.mp samp {color:#131211}
-  .mp h1,.mp h2,.mp h3,.mp h4 {color:#030201}
-  .mp u {text-decoration:underline}
-  .mp code,.mp strong,.mp b {font-weight:bold;color:#131211}
-  .mp em,.mp var {font-style:italic;color:#232221;text-decoration:none}
-  .mp a,.mp a:link,.mp a:hover,.mp a code,.mp a pre,.mp a tt,.mp a kbd,.mp a samp {color:#0000ff}
-  .mp b.man-ref {font-weight:normal;color:#434241}
-  .mp pre {padding:0 4ex}
-  .mp pre code {font-weight:normal;color:#434241}
-  .mp h2+pre,h3+pre {padding-left:0}
-  ol.man-decor,ol.man-decor li {margin:3px 0 10px 0;padding:0;float:left;width:33%;list-style-type:none;text-transform:uppercase;color:#999;letter-spacing:1px}
-  ol.man-decor {width:100%}
-  ol.man-decor li.tl {text-align:left}
-  ol.man-decor li.tc {text-align:center;letter-spacing:4px}
-  ol.man-decor li.tr {text-align:right;float:right}
-  </style>
-  <style type='text/css' media='all'>
-  /* style: toc */
-  .man-navigation {display:block !important;position:fixed;top:0;left:113ex;height:100%;width:100%;padding:48px 0 0 0;border-left:1px solid #dbdbdb;background:#eee}
-  .man-navigation a,.man-navigation a:hover,.man-navigation a:link,.man-navigation a:visited {display:block;margin:0;padding:5px 2px 5px 30px;color:#999;text-decoration:none}
-  .man-navigation a:hover {color:#111;text-decoration:underline}
-  </style>
-  <style type='text/css' media='all'>
-  /* style: 80c */
-  .mp {max-width:86ex}
-   
-  .man-navigation {left:101ex}
-  </style>
-</head>
-<!--
-  The following styles are deprecated and will be removed at some point:
-  div#man, div#man ol.man, div#man ol.head, div#man ol.man.
+<h1>Alpine Linux Desktop Notes</h1>
 
-  The .man-page, .man-decor, .man-head, .man-foot, .man-title, and
-  .man-navigation should be used instead.
--->
-<body id='manpage'>
-  <div class='mp' id='man'>
+<h2>Installation</h2>
 
-  <div class='man-navigation' style='display:none'>
-    <a href="#NAME">NAME</a>
-    <a href="#SYNOPSIS">SYNOPSIS</a>
-    <a href="#DESCRIPTION">DESCRIPTION</a>
-    <a href="#SYSTEM-SERVICES">SYSTEM SERVICES</a>
-    <a href="#HOSTNAME">HOSTNAME</a>
-    <a href="#LOCALIZATION">LOCALIZATION</a>
-    <a href="#TIME">TIME</a>
-    <a href="#FILE-SYSTEMS">FILE SYSTEMS</a>
-    <a href="#PACKAGE-MANAGERS">PACKAGE MANAGERS</a>
-    <a href="#BOOT-LOADER">BOOT LOADER</a>
-    <a href="#MODULES">MODULES</a>
-    <a href="#SOURCES-LIST">SOURCES.LIST</a>
-    <a href="#BUGS">BUGS</a>
-    <a href="#SEE-ALSO">SEE ALSO</a>
-    <a href="#AUTHOR">AUTHOR</a>
-  </div>
+<p>Dual boot installation guide here:</p>
 
-  <ol class='man-decor man-head man head'>
-    <li class='tl'>BunsenLabs(7)</li>
-    <li class='tc'></li>
-    <li class='tr'>BunsenLabs(7)</li>
-  </ol>
+<p><a href="https://wiki.alpinelinux.org/wiki/Installing_Alpine_on_HDD_dualbooting">https://wiki.alpinelinux.org/wiki/Installing_Alpine_on_HDD_dualbooting</a></p>
 
-  <h2 id="NAME">NAME</h2>
-<p class="man-name">
-  <code>BunsenLabs</code> - <span class="man-whatis">A light-weight and easily customizable GNU/Linux distribution based on the Openbox window manager.</span>
-</p>
+<p>GRUB is now available in Alpine and so can be installed directly :)</p>
 
-<h2 id="SYNOPSIS">SYNOPSIS</h2>
+<h2>Post Installation</h2>
 
-<p>Overview of the basic configuration of BunsenLabs.</p>
+<h3>Xorg</h3>
 
-<h2 id="DESCRIPTION">DESCRIPTION</h2>
+<p>Follow this guide to install Xorg itself:</p>
 
-<p>BunsenLabs Linux is a distribution offering a light-weight and easily customizable Openbox desktop. This man page gives a brief overview of the configuration files.</p>
+<p><a href="https://wiki.alpinelinux.org/wiki/Alpine_setup_scripts#setup-xorg-base">https://wiki.alpinelinux.org/wiki/Alpine_setup_scripts#setup-xorg-base</a></p>
 
-<h2 id="SYSTEM-SERVICES">SYSTEM SERVICES</h2>
+<h3>Graphics</h3>
 
-<p>System services to be started at boot can be enabled using <code>systemctl enable &lt;name></code>. To view available services, use <code>systemctl list-unit-files</code>. For the graphical desktop, use <code>/usr/lib/i386-linux-gnu/openbox-xdg-autostart --list</code> or <code>/usr/lib/x86_64-linux-gnu/openbox-xdg-autostart --list</code> to list any XDG autostarted programs, and see $HOME/.config/openbox/autostart for all other applications.</p>
+<p>Kernel mode setting needs to be activated for the graphics card:</p>
 
-<h2 id="HOSTNAME">HOSTNAME</h2>
+<p>Intel: <a href="https://wiki.alpinelinux.org/wiki/Intel_Video">https://wiki.alpinelinux.org/wiki/Intel_Video</a></p>
 
-<p>The hostname of the machine can be set using <code>hostnamectl set-hostname &lt;hostname></code>. It will then be written to /etc/hostname</p>
+<p>AMD: <a href="https://wiki.alpinelinux.org/wiki/Radeon_Video">https://wiki.alpinelinux.org/wiki/Radeon_Video</a></p>
 
-<h2 id="LOCALIZATION">LOCALIZATION</h2>
+<h3>Sound</h3>
 
-<p>To set the system locale(s), run <code>dpkg-reconfigure locales</code> and select the locale(s) you wish to generate. If ssh access is required, it is recommended to choose "None" as the default locale. Alternatively, enable the desired locales in /etc/locale.gen and generate them with <code>locale-gen</code>. The system-wide locale to be used can be configured in /etc/locale.conf These settings can be overridden on a per-user basis by keeping a user-specific locale.conf in $HOME/.config/locale.conf The user-specific file will take precedence if it exists.</p>
+<p>Use a kernel command line option to set the default audio device, <em>e.g.</em> <code>snd-hda-intel.index=1</code></p>
 
-<h2 id="TIME">TIME</h2>
+<h3>Groups</h3>
 
-<p>The local time is configured by calling <code>timedatectl set-timezone &lt;Region/City&gt;</code>. A relative symlink is then created from /etc/localtime to the correct zoneinfo file under /usr/share/zoneinfo/ The real-time clock, which keeps track of time when the computer is off, can be configured to either be in UTC or in local time by calling <code>timedatectl set-local-rtc &lt;false|true></code>. The default is UTC.</p>
+<p>Add the main user to the <code>audio</code> and <code>video</code> groups to access the relevant hardware:</p>
 
-<h2 id="FILE-SYSTEMS">FILE SYSTEMS</h2>
+<pre><code>adduser $USER audio
+adduser $USER video</code></pre>
 
-<p>File systems are configured in /etc/fstab and encryption mappings are configured in /etc/crypttab</p>
+<h3>Getting regular stuff working</h3>
 
-<h2 id="PACKAGE-MANAGERS">PACKAGE MANAGERS</h2>
+<p><a href="https://wiki.alpinelinux.org/wiki/How_to_get_regular_stuff_working">https://wiki.alpinelinux.org/wiki/How_to_get_regular_stuff_working</a></p>
 
-<p>Both aptitude and apt-get are configured in /etc/apt/apt.conf</p>
+<h3>Packaging</h3>
 
-<h2 id="BOOT-LOADER">BOOT LOADER</h2>
+<p>Alpine Linux uses APKBUILDs, which are very similar to Arch's PKGBUILDs, and has an <em>aports</em> tree to provide access to these:</p>
 
-<p>GRUB's configuration is generated from /etc/default/grub by <code>update-grub</code></p>
-
-<h2 id="MODULES">MODULES</h2>
-
-<p>Most modules should be loaded on-demand. Modules to be unconditionally loaded at boot can be specified in /etc/modules-load.d/ and modules to be blacklisted from automatically loading can be configured in /etc/modprobe.d/</p>
-
-<h2 id="SOURCES-LIST">SOURCES.LIST</h2>
-
-<p>BunsenLabs is based on Debian stable and so Ubuntu PPAs &amp; Debian testing/unstable/experimental repositories should <em>not</em> be added to /etc/apt/sources.list or any files in /etc/apt/sources.list.d/</p>
-
-<h2 id="BUGS">BUGS</h2>
-
-<p>Probably. If you find any, please report them to the bugtacker at https://www.bunsenlabs.org/resources.html#core-packages-and-bug-reports</p>
-
-<h2 id="SEE-ALSO">SEE ALSO</h2>
-
-<p><span class="man-ref">systemctl<span class="s">(1)</span></span>, <span class="man-ref">hostnamectl<span class="s">(1)</span></span>, <span class="man-ref">hostname<span class="s">(5)</span></span>, <span class="man-ref">locale.conf<span class="s">(5)</span></span>, <span class="man-ref">timedatectl<span class="s">(1)</span></span>, <span class="man-ref">timezone<span class="s">(3)</span></span>, <span class="man-ref">hwclock<span class="s">(8)</span></span>, <span class="man-ref">fstab<span class="s">(5)</span></span>, <span class="man-ref">crypttab<span class="s">(5)</span></span>, <span class="man-ref">apt-get<span class="s">(8)</span></span>, <span class="man-ref">aptitude<span class="s">(8)</span></span>, <span class="man-ref">apt.conf<span class="s">(5)</span></span>, <span class="man-ref">update-grub<span class="s">(8)</span></span>, <span class="man-ref">modules-load.d<span class="s">(5)</span></span>, <span class="man-ref">modprobe.d<span class="s">(5)</span></span>, <span class="man-ref">systemd<span class="s">(1)</span></span></p>
-
-<h2 id="AUTHOR">AUTHOR</h2>
-
-<p>Written by Matthew T Hoare</p>
-
-
-  <ol class='man-decor man-foot man foot'>
-    <li class='tl'></li>
-    <li class='tc'>December 2015</li>
-    <li class='tr'>BunsenLabs(7)</li>
-  </ol>
-
-  </div>
-</body>
-</html>
+<p><a href="https://wiki.alpinelinux.org/wiki/Aports_tree">https://wiki.alpinelinux.org/wiki/Aports_tree</a></p>
