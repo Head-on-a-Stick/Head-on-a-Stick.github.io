@@ -8,6 +8,16 @@
 
 <p>GRUB is now available in Alpine and so can be installed directly :)</p>
 
+<p>Here is my menuentry (with Intel microcode line):</p>
+
+<pre><code>menuentry 'Alpine Linux' {
+   set root='hdX,Y'
+   linux /boot/vmlinuz-vanilla root=/dev/sdZY rw modules=xfs rootfstype=xfs quiet
+   initrd /boot/intel-ucode.img /boot/initramfs-vanilla
+}</code></pre>
+
+<p>The filesystem type and module need to be declared explicitly for them to be loaded.</p>
+
 <h2>Post Installation</h2>
 
 <h3>Xorg</h3>
