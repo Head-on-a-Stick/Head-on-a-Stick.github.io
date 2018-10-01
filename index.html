@@ -3,7 +3,7 @@
 	<p><a href="https://alpinelinux.org/"><img src="alpinelinux-logo.svg" alt="Alpine Logo" title="" /></a></p>
 </head>
 
-<h2>Installation</h2>
+<h3>Installation</h3>
 
 <p><strong>Note:</strong> the ISO images do not include any wireless packages so an ethernet connection is preferred.</p>
 
@@ -23,15 +23,19 @@
 
 <p>The filesystem type and module need to be declared explicitly for them to be loaded.</p>
 
-<h2>Post Installation</h2>
+<h3>Post Installation</h3>
 
-<h3>Xorg</h3>
+<h4>Xorg</h4>
 
 <p>Follow this guide to install Xorg itself:</p>
 
 <p><a href="https://wiki.alpinelinux.org/wiki/Alpine_setup_scripts#setup-xorg-base">https://wiki.alpinelinux.org/wiki/Alpine_setup_scripts#setup-xorg-base</a></p>
 
-<h3>Graphics</h3>
+<p>The Gentoo Wiki shows how to run X as a non-root user:</p>
+
+<p><a href="https://wiki.gentoo.org/wiki/Non_root_Xorg#Alternative_method">https://wiki.gentoo.org/wiki/Non_root_Xorg#Alternative_method</a></p>
+
+<h4>Graphics</h4>
 
 <p>Kernel mode setting needs to be activated for the graphics card:</p>
 
@@ -39,38 +43,38 @@
 
 <p>AMD: <a href="https://wiki.alpinelinux.org/wiki/Radeon_Video">https://wiki.alpinelinux.org/wiki/Radeon_Video</a></p>
 
-<h3>Sound</h3>
+<h4>Sound</h4>
 
 <p>Use a kernel command line option to set the default audio device, <em>e.g.</em> <code>snd-hda-intel.index=1</code></p>
 
-<h3>Groups</h3>
+<h4>Groups</h4>
 
 <p>Add the main user to the <code>audio</code> and <code>video</code> groups to access the relevant hardware:</p>
 
 <pre><code>adduser $USER audio
 adduser $USER video</code></pre>
 
-<h3>Getting regular stuff working</h3>
+<h4>Getting regular stuff working</h4>
 
 <p><a href="https://wiki.alpinelinux.org/wiki/How_to_get_regular_stuff_working">https://wiki.alpinelinux.org/wiki/How_to_get_regular_stuff_working</a></p>
 
-<h3>Packaging</h3>
+<h4>Packaging</h4>
 
 <p>Alpine Linux uses APKBUILDs, which are very similar to Arch's PKGBUILDs, and has an <em>aports</em> tree to provide access to these:</p>
 
 <p><a href="https://wiki.alpinelinux.org/wiki/Aports_tree">https://wiki.alpinelinux.org/wiki/Aports_tree</a></p>
 
-<h3>OpenRC</h3>
+<h4>OpenRC</h4>
 
 <p>See the Gentoo wiki for details.</p>
 
-<h3>Firmware</h3>
+<h4>Firmware</h4>
 
 <p>Non-free firmware must be installed when required, this means nearly all wireless cards and also current AMD &amp; Intel graphics cards.</p>
 
 <p>CPU firmware can be unpacked from the Arch Linux <a href="https://www.archlinux.org/packages/extra/any/intel-ucode/">intel-ucode</a> &amp; <a href="https://www.archlinux.org/packages/core/any/amd-ucode/">amd-ucode</a> packages and added to the bootloader configuration as per <a href="https://wiki.archlinux.org/index.php/Microcode#Manual_method">https://wiki.archlinux.org/index.php/Microcode#Manual_method</a>. </p>
 
-<h4>Miscellaneous Links</h4>
+<h3>Miscellaneous Links</h3>
 
 <p><a href="/sids_page">Sid's page</a></p>
 
