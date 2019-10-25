@@ -1,21 +1,27 @@
 <head>
  <link href="styles/style.css" rel="stylesheet" type="text/css">
 </head>
-
 <h1><a href="https://github.com/Head-on-a-Stick/Sharpbang">SharpBang</a></h1>
-
 <p><a href="https://travis-ci.com/Head-on-a-Stick/SharpBang"><img src="https://travis-ci.com/Head-on-a-Stick/SharpBang.svg?branch=master" alt="Build Status" title="" /></a></p>
-
 <img src="scrot.png"></img>
-
 <p>SharpBang (♯!) is a live ISO image that can be used to install a pre-configured Openbox/Tint2 desktop running on Debian stable.</p>
-
+<p>The username for the live system is <em>user</em> and the password is <em>live</em>.</p>
 <p>The live-build system is used to create the ISO, just like the official Debian images. A full suite of rescue &amp; recovery tools are included in the live environment and a rescue mode is accessible from the boot menu which can be used to open a shell in an installed system.</p>
-
-<p>Documentation: <a href="https://live-team.pages.debian.net/live-manual/">https://live-team.pages.debian.net/live-manual</a></p>
-
+<h3>Pre-built images</h3>
+<p><a href="https://github.com/Head-on-a-Stick/SharpBang/releases/download/0.2.0%2B201910241703/sharpbang-buster-amd64.hybrid.iso">sharpbang-buster-amd64.hybrid.iso</a></p>
+<p>sha512sum:</p>
+<pre><code>900330a16267c7344e004a199afd5ad694c82225756038642cbc752adfba272591262f7aa05569f5028cf3a897c896eef96cdb2980ce7cf6c505337afee45a1e</code></pre>
+<p><a href="https://github.com/Head-on-a-Stick/SharpBang/releases/download/0.2.0%2B201910241801/sharpbang-buster-i386.hybrid.iso">sharpbang-buster-i386.hybrid.iso</a></p>
+<p>sha512sum:</p>
+<pre><code>0a27c87b4470ac8b3398a66b27f81a7c71a43275372dbc890d8e502f5c70f3a9724c02aac59a4ea30d76cdae0f8577b872d29b85c0c13eba3115f455f5772af9</code></pre>
+<p>Use <code>cp</code> to transfer the image to a USB stick, for example:</p>
+<pre>
+<code>
+cp sharpbang-buster-amd64.hybrid.iso /dev/sdX ; sync
+</code>
+</pre>
+Replace <b>X</b> with the letter assigned to the USB stick, <b>do not</b> add a partition number.
 <h3>Build Instructions</h3>
-
 <p>Change into the <strong>buster</strong> directory then run:</p>
 <pre>
 <code>
@@ -24,41 +30,15 @@ lb config
 lb build
 </code>
 </pre>
-<p>Use <code>cp</code> to transfer the image to a USB stick:</p>
-<pre>
-<code>
-cp sharpbang-buster.img /dev/sdX ; sync
-</code>
-</pre>
-<p>The username for the live system is <em>user</em> and the password is <em>live</em>.</p>
-
 <h3>Customising the Image</h3>
-
-<p>See the live-build documentation for detailed instructions.</p>
-
+<p>See the <a href="https://live-team.pages.debian.net/live-manual/">live-build documentation</a> for detailed instructions.</p>
 <h4>auto/config</h4>
-
 <p>This contains the general configuration options for creating the image.</p>
-
 <h4>config/bootloaders</h4>
-
 <p>GRUB is used for UEFI systems and isolinux is for non-UEFI systems. Both use config/bootloaders/isolinux/splash.png as the background image.</p>
-
 <h4>config/packages.chroot</h4>
-
 <p>Contains .debs for any custom packages, the <em>sharp-configs</em> package provides the desktop configuration files &amp; scripts and can be obtained from here:</p>
-
-<p><a href="https://build.opensuse.org/package/show/home:Head_on_a_Stick:sharpbang/sharp-configs">https://build.opensuse.org/package/show/home:Head_on_a_Stick:sharpbang/sha    rp-configs</a></p>
-
+<p><a href="https://build.opensuse.org/package/show/home:Head_on_a_Stick:sharpbang/sharp-configs">https://build.opensuse.org/package/show/home:Head_on_a_Stick:sharpbang/sharp-configs</a></p>
 <p>The source can be downloaded from the repository then modified and rebuilt with <code>debuild -us -uc</code>.</p>
-
-<h3>Pre-built images</h3>
-<p><a href="https://github.com/Head-on-a-Stick/SharpBang/releases/download/0.2.0%2B201910241703/sharpbang-buster-amd64.hybrid.iso">sharpbang-buster-amd64.hybrid.iso</a></p>
-<p>sha512sum:</p>
-<pre><code>900330a16267c7344e004a199afd5ad694c82225756038642cbc752adfba272591262f7aa05569f5028cf3a897c896eef96cdb2980ce7cf6c505337afee45a1e</code></pre>
-<p><a href="https://github.com/Head-on-a-Stick/SharpBang/releases/download/0.2.0%2B201910241801/sharpbang-buster-i386.hybrid.iso">sharpbang-buster-i386.hybrid.iso</a></p>
-<p>sha512sum:</p>
-<pre><code>0a27c87b4470ac8b3398a66b27f81a7c71a43275372dbc890d8e502f5c70f3a9724c02aac59a4ea30d76cdae0f8577b872d29b85c0c13eba3115f455f5772af9</code></pre>
-
 <h3>Miscellaneous Links</h3>
 <p><a href="/sids_page">Sid's page</a></p>
