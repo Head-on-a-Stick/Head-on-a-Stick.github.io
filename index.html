@@ -1,6 +1,9 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <head>
    <title>SharpBang GNU/Linux</title>
-   <link href="styles/style.css" rel="stylesheet" type="text/css">
    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
@@ -9,24 +12,38 @@
    <meta name="msapplication-TileColor" content="#da532c">
    <meta name="theme-color" content="#ffffff">
 </head>
-<h1><a href="https://github.com/Head-on-a-Stick/Sharpbang">SharpBang GNU/Linux</a></h1>
-<p><a href="https://travis-ci.com/Head-on-a-Stick/SharpBang"><img src="https://travis-ci.com/Head-on-a-Stick/SharpBang.svg?branch=master" alt="Build Status" title="" /></a></p>
-<img src="scrot.png"></img>
-<p>SharpBang (♯!) is a <a href="https://en.wikipedia.org/wiki/Live_CD">live ISO image</a> that can be used to install a pre-configured <a href="http://openbox.org">Openbox</a>/<a href="https://gitlab.com/o9000/tint2">Tint2</a> desktop running on <a href="https://www.debian.org">Debian</a> stable.</p>
-<p>The username for the live system is <code>user</code> and the password is <code>live</code>.</p>
-<p>The live-build system is used to create the ISO, just like the official Debian images. A full suite of rescue &amp; recovery tools are included in the live environment and a rescue mode is accessible from the boot menu which can be used to open a shell in an installed system.</p>
-<p><a href="https://github.com/Head-on-a-Stick/SharpBang/releases/download/0.2.0%2B201910241703/sharpbang-buster-amd64.hybrid.iso">sharpbang-buster-amd64.hybrid.iso</a> (64-bit x86)</p>
-<p>sha512sum:</p>
-<pre><code>900330a16267c7344e004a199afd5ad694c82225756038642cbc752adfba272591262f7aa05569f5028cf3a897c896eef96cdb2980ce7cf6c505337afee45a1e</code></pre>
-<p><a href="https://github.com/Head-on-a-Stick/SharpBang/releases/download/0.2.0%2B201910241801/sharpbang-buster-i386.hybrid.iso">sharpbang-buster-i386.hybrid.iso</a> (32-bit x86 with PAE)</p>
-<p>sha512sum:</p>
-<pre><code>0a27c87b4470ac8b3398a66b27f81a7c71a43275372dbc890d8e502f5c70f3a9724c02aac59a4ea30d76cdae0f8577b872d29b85c0c13eba3115f455f5772af9</code></pre>
-<p>Use <code>cp</code> to transfer the image to a USB stick, for example:</p>
-<pre>
-<code>
-cp sharpbang-buster-amd64.hybrid.iso /dev/sdX ; sync
-</code>
-</pre>
-<p>Replace <code>X</code> with the letter assigned to the USB stick, <b>do not</b> add a partition number.</p>
-<h4>Miscellaneous Links</h4>
-<p><a href="/sids_page">Sid's page</a></p>
+<style>
+   body{
+      margin: 1em auto;
+      max-width: 40em;
+      padding: 0 .6em;
+      font: 18px sans-serif;
+   }
+   h1,h2,h3 {
+      line-height:1.2;
+   }
+   @media print{
+      body{
+         max-width:none
+      }
+   }
+</style>
+<article>
+	<h1><a href="https://github.com/Head-on-a-Stick/Sharpbang">SharpBang GNU/Linux</a></h1>
+	<p><a href="https://travis-ci.com/Head-on-a-Stick/SharpBang"><img src="https://travis-ci.com/Head-on-a-Stick/SharpBang.svg?branch=master" alt="Build Status" title="" /></a></p>
+	<img src="scrot.png"></img>
+	<p>SharpBang (♯!) is a <a href="https://en.wikipedia.org/wiki/Live_CD">live ISO image</a> that can be used to install a pre-configured <a href="http://openbox.org">Openbox</a>/<a href="https://gitlab.com/o9000/tint2">Tint2</a> desktop running on <a href="https://www.debian.org">Debian</a> stable.</p>
+	<p>The username for the live system is <code>user</code> and the password is <code>live</code>.</p>
+	<p>The live-build system is used to create the ISO, just like the official Debian images. A full suite of rescue &amp; recovery tools are included in the live environment and a rescue mode is accessible from the boot menu which can be used to open a shell in an installed system.</p>
+	<p><a href="https://github.com/Head-on-a-Stick/SharpBang/releases/download/0.2.0%2B201910241703/sharpbang-buster-amd64.hybrid.iso">sharpbang-buster-amd64.hybrid.iso</a> (64-bit x86)</p>
+	<p>sha512sum:</p>
+	<pre><code>900330a16267c7344e004a199afd5ad694c82225756038642cbc752adfba272591262f7aa05569f5028cf3a897c896eef96cdb2980ce7cf6c505337afee45a1e</code></pre>
+	<p><a href="https://github.com/Head-on-a-Stick/SharpBang/releases/download/0.2.0%2B201910241801/sharpbang-buster-i386.hybrid.iso">sharpbang-buster-i386.hybrid.iso</a> (32-bit x86 with PAE)</p>
+	<p>sha512sum:</p>
+	<pre><code>0a27c87b4470ac8b3398a66b27f81a7c71a43275372dbc890d8e502f5c70f3a9724c02aac59a4ea30d76cdae0f8577b872d29b85c0c13eba3115f455f5772af9</code></pre>
+	<p>Use <code>cp</code> to transfer the image to a USB stick, for example:</p>
+	<pre><code>cp sharpbang-buster-amd64.hybrid.iso /dev/sdX ; sync</code></pre>
+	<p>Replace <code>X</code> with the letter assigned to the USB stick, <b>do not</b> add a partition number.</p>
+	<h4>Miscellaneous Links</h4>
+</article>
+	<p><a href="/sids_page">Sid's page</a></p>
