@@ -35,15 +35,26 @@
 	<p>SharpBang (♯!) is a <a href="https://en.wikipedia.org/wiki/Live_CD">live ISO image</a> that can be used to install a pre-configured <a href="http://openbox.org">Openbox</a>/<a href="https://gitlab.com/o9000/tint2">Tint2</a> desktop running on <a href="https://www.debian.org">Debian</a> stable.</p>
 	<p>The username for the live system is <code>user</code> and the password is <code>live</code>.</p>
 	<p>The live-build system is used to create the ISO, just like the official Debian images. A full suite of rescue &amp; recovery tools are included in the live environment and a rescue mode is accessible from the boot menu which can be used to open a shell in an installed system.</p>
+   <h3>Download links</h3>
 	<p><a href="https://github.com/Head-on-a-Stick/SharpBang/releases/download/0.3.0+amd64/sharpbang-buster-amd64.hybrid.iso">sharpbang-buster-amd64.hybrid.iso</a> (64-bit x86)</p>
 	<p>sha512sum:</p>
 	<pre><code>f9b888b18b0ae49e8c52152436f3fdfa2900cfd74f8a34703ae4aaa84444c8c34548872a16c8513bef42f3e3df27fee769da1829a0812a52ab210f200387b698</code></pre>
 	<p><a href="https://github.com/Head-on-a-Stick/SharpBang/releases/download/0.3.0+i386/sharpbang-buster-i386.hybrid.iso">sharpbang-buster-i386.hybrid.iso</a> (32-bit x86 with PAE)</p>
 	<p>sha512sum:</p>
 	<pre><code>e6c0c377efa811bd29bec41dd72d7f2fae1d40e17fdb9d9fe2d60a417c533a4e54e129a687c2a790aef949d8bafda89b93b6cdf291c8605390aef098ed996a3d</code></pre>
+   <h3>Booting the image</h3>
 	<p>Use <code>cp</code> to transfer the image to a USB stick, for example:</p>
 	<pre><code>cp sharpbang-buster-amd64.hybrid.iso /dev/sdX ; sync</code></pre>
 	<p>Replace <code>X</code> with the letter assigned to the USB stick, <b>do not</b> add a partition number.</p>
-	<h4>Miscellaneous Links</h4>
+   <h4>Hard drive GRUB entry</h4>
+   <p>To add a GRUB boot menu entry for the ISO copy the image to <code>/usr/share/sharpbang/sharpbang.iso</code> then create a file at <code>/boot/grub/custom.cfg</code> with this content:</p>
+   <pre><code>menuentry 'SharpBang (live) {
+      isofile=/usr/share/sharpbang/sharpbang.iso
+      loopback loop (hd0,1)$isofile
+      linux (loop)/live/vmlinuz boot=live config fromiso=/dev/sda1/$isofile toram
+      initrd (loop)/live/initrd.img
+}</code></pre>
+   <p>Replace <code>hd0,1</code> &amp; <code>sda1</code> with the correct identifiers for your disk.</p>
+   <h2>Miscellaneous Links</h2>
 	<p><a href="/sids_page">Sid's page</a></p>
 </article>
