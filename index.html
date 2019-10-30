@@ -65,11 +65,11 @@
    <h4>Hard drive GRUB entry</h4>
    <p>To add a GRUB boot menu entry for the ISO copy the image to <code>/usr/share/sharpbang/sharpbang.iso</code> then create a file at <code>/boot/grub/custom.cfg</code> with this content:</p>
    <div style="border:none;width:auto;height:auto;overflow:auto;">
-   <pre><code>menuentry 'SharpBang (live) {
-   isofile=usr/share/sharpbang/sharpbang.iso
-   loopback loop (hd0,1)/$isofile
-   linux (loop)/live/vmlinuz boot=live config fromiso=/dev/sda1/$isofile toram
-   initrd (loop)/live/initrd.img
+   <pre><code>menuentry 'SharpBang (live) {                                   
+   isofile=usr/share/sharpbang/sharpbang.iso                                  
+   loopback loop (hd0,1)/$isofile                                             
+   linux (loop)/live/vmlinuz boot=live config fromiso=/dev/sda1/$isofile toram  
+   initrd (loop)/live/initrd.img                                              
 }</code></pre>
    </div>
    <p>Replace <code>hd0,1</code> &amp; <code>sda1</code> with the correct identifiers for your disk.</p>
