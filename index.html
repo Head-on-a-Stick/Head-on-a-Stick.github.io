@@ -22,7 +22,24 @@
       font-size: 1rem;
       line-height: 1.4;
    }
+   a {
+      color: #000000;
+   }
+   a:visited {
+      color: #000000;
+   }
+   a:hover {
+      color: #000000;
+      text-decoration: underline;
+   }
+   a:active {
+      color: #000000;
+   }
+   h1 {
+      text-align: center;
+   }
    h3 {
+      text-align: center;
       border-top: solid 0.1rem #aaa;
       border-bottom: solid 0.1rem #aaa;
    }
@@ -38,8 +55,8 @@
 </style>
 <article>
 	<h1><a href="https://github.com/Head-on-a-Stick/Sharpbang">SharpBang GNU/Linux</a></h1>
+   <a href="scrot.png"><img src="scrot.png" class="center"/></a>
 	<p><a href="https://travis-ci.com/Head-on-a-Stick/SharpBang"><img src="https://travis-ci.com/Head-on-a-Stick/SharpBang.svg?branch=master" alt="Build Status" title=""/></a></p>
-   <a href="scrot.png"><img src="scrot_small.png"/></a>
 	<p>SharpBang (♯!) is a <a href="https://en.wikipedia.org/wiki/Live_CD">live ISO image</a> that can be used to install a pre-configured <a href="http://openbox.org">Openbox</a>/<a href="https://gitlab.com/o9000/tint2">Tint2</a> desktop running on <a href="https://www.debian.org">Debian</a> stable.</p>
 	<p>The username for the live system is <code>user</code> and the password is <code>live</code>.</p>
 	<p>The live-build system is used to create the ISO, just like the official Debian images. A full suite of rescue &amp; recovery tools are included in the live environment and a rescue mode is accessible from the boot menu which can be used to open a shell in an installed system.</p>
