@@ -22,6 +22,10 @@
       font-size: 1rem;
       line-height: 1.4;
    }
+   h3 {
+      border-top: solid 0.1rem #444444;
+      border-bottom: solid 0.1rem #444444;
+   }
    pre,
    code,
    xmp {
@@ -41,22 +45,22 @@
 	<p>SharpBang (♯!) is a <a href="https://en.wikipedia.org/wiki/Live_CD">live ISO image</a> that can be used to install a pre-configured <a href="http://openbox.org">Openbox</a>/<a href="https://gitlab.com/o9000/tint2">Tint2</a> desktop running on <a href="https://www.debian.org">Debian</a> stable.</p>
 	<p>The username for the live system is <code>user</code> and the password is <code>live</code>.</p>
 	<p>The live-build system is used to create the ISO, just like the official Debian images. A full suite of rescue &amp; recovery tools are included in the live environment and a rescue mode is accessible from the boot menu which can be used to open a shell in an installed system.</p>
-   <h4>Download links & sha512sum</h4>
-   <h5>64-bit x86 (amd64):</h5>
+   <h3>Download links & sha512sum</h3>
+   <h4>64-bit x86 (amd64):</h4>
    <p><a href="https://github.com/Head-on-a-Stick/SharpBang/releases/download/0.3.2+amd64/sharpbang-buster-0.3.2-amd64.hybrid.iso">sharpbang-buster-0.3.2-amd64.hybrid.iso</a></p>
    <div style="border:none;width:40em;height:3em;overflow:auto;">
 	<pre><code>74cdf8c1fdfbd1e981249a5b2674aa9a87c51e3f350cea242ebb15390b4e433754790985ccece4a27284f3e6ba71fa7bd1d69b7f58739b080e08d14ba51885a4</code></pre>
    </div>
-   <h5>32-bit x86 with PAE (i386):</h5>
+   <h4>32-bit x86 with PAE (i386):</h4>
 	<p><a href="https://github.com/Head-on-a-Stick/SharpBang/releases/download/0.3.2+i386/sharpbang-buster-0.3.2-i386.hybrid.iso">sharpbang-buster-0.3.2-i386.hybrid.iso</a></p>
    <div style="border:none;width:40em;height:3em;overflow:auto;">
 	<pre><code>f4097e716abfca8eac5d2bc324a2f757bb820dda4befcc488d520aa0818541628d7f50ec7934ab45ba83c9324f855b9d885110336f1961481bb79da862ae26e8</code></pre>
    </div>
-   <h4>Booting the image</h4>
+   <h3>Booting the image</h3>
 	<p>Use <code>cp</code> to transfer the image to a USB stick, for example:</p>
 	<pre><code>cp sharpbang-buster-0.3.2-amd64.hybrid.iso /dev/sdX ; sync</code></pre>
 	<p>Replace <code>X</code> with the letter assigned to the USB stick, <b>do not</b> add a partition number.</p>
-   <h5>Hard drive GRUB entry</h5>
+   <h4>Hard drive GRUB entry</h4>
    <p>To add a GRUB boot menu entry for the ISO copy the image to <code>/usr/share/sharpbang/sharpbang.iso</code> then create a file at <code>/boot/grub/custom.cfg</code> with this content:</p>
    <pre><code>menuentry 'SharpBang (live) {
    isofile=usr/share/sharpbang/sharpbang.iso
