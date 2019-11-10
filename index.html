@@ -67,6 +67,14 @@
    <h4>32-bit x86 (i386):</h4>
 	<p><a href="https://github.com/Head-on-a-Stick/SharpBang/releases/download/0.5.2+i386/sharpbang-buster-0.5.2-i386.hybrid.iso">sharpbang-buster-0.5.2-i386.hybrid.iso</a></p> 
    <p><a href="sha512sum.i386">sha512sum</a></p>
+   <h3>Verifying the image</h3>
+   <p>Download the ISO and matching sha512sum file, place them both in the same directory then run this command:
+   <div style="border:none;width:auto;height:auto;overflow:auto;">
+   <pre><code>sha512sum -c sha512sum.*</code></pre>
+   <p>Expected output:</p>
+   <div style="border:none;width:auto;height:auto;overflow:auto;">
+   <pre><code>sharpbang-buster-0.5.4-amd64.hybrid.iso: OK</code></pre>
+   </div>
    <h3>Booting the image</h3>
 	<p>Use <code>cp</code> to transfer the image to a USB stick, for example:</p>
    <div style="border:none;width:auto;height:auto;overflow:auto;">
