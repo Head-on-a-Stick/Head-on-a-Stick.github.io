@@ -62,23 +62,23 @@
    <p>The <a href="https://live-team.pages.debian.net/live-manual/">live-build</a> system is used to create the ISO, just like the official Debian images. A full suite of rescue &amp; recovery tools are included in the live environment and a rescue mode is accessible from the boot menu which can be used to open a shell in an installed system.</p>
    <h3>Download links</h3>
    <h4>64-bit x86:</h4>
-   <p><a href="https://github.com/Head-on-a-Stick/SharpBang/releases/download/10.2.3+amd64/sharpbang-buster-10.2.3-amd64.hybrid.iso">sharpbang-buster-10.2.3-amd64.hybrid.iso</a></p>
-   <p><a href="https://github.com/Head-on-a-Stick/SharpBang/releases/download/10.2.3+amd64/sha512sum.amd64">sha512sum.amd64</a></p>
+   <p><a href="https://github.com/Head-on-a-Stick/SharpBang/releases/download/10.2.4+amd64/sharpbang-buster-10.2.4-amd64.hybrid.iso">sharpbang-buster-10.2.4-amd64.hybrid.iso</a></p>
+   <p><a href="https://github.com/Head-on-a-Stick/SharpBang/releases/download/10.2.4+amd64/sha512sum.amd64">sha512sum.amd64</a></p>
    <h4>32-bit x86:</h4>
-	<p><a href="https://github.com/Head-on-a-Stick/SharpBang/releases/download/10.2.3+i386+3/sharpbang-buster-10.2.3-i386.hybrid.iso">sharpbang-buster-10.2.3-i386.hybrid.iso</a></p> 
-   <p><a href="https://github.com/Head-on-a-Stick/SharpBang/releases/download/10.2.3+i386+3/sha512sum.i386">sha512sum.i386</a></p>
+	<p><a href="https://github.com/Head-on-a-Stick/SharpBang/releases/download/10.2.4+i386/sharpbang-buster-10.2.4-i386.hybrid.iso">sharpbang-buster-10.2.4-i386.hybrid.iso</a></p> 
+   <p><a href="https://github.com/Head-on-a-Stick/SharpBang/releases/download/10.2.4+i386/sha512sum.i386">sha512sum.i386</a></p>
    <h3>Verifying the image</h3>
    <p>Download the ISO and matching sha512sum file, place them both in the current working directory then run this command (substitute <i>i386</i> in place of <i>amd64</i> for 32-bit images):
    <div style="border:none;width:auto;height:auto;overflow:auto;">
    <pre><code>sha512sum -c sha512sum.amd64</code></pre>
    <p>Expected output:</p>
    <div style="border:none;width:auto;height:auto;overflow:auto;">
-   <pre><code>sharpbang-buster-10.2.3-amd64.hybrid.iso: OK</code></pre>
+   <pre><code>sharpbang-buster-10.2.4-amd64.hybrid.iso: OK</code></pre>
    </div>
    <h3>Booting the image</h3>
 	<p>Use <code>cp</code> to transfer the image to a USB stick, for example:</p>
    <div style="border:none;width:auto;height:auto;overflow:auto;">
-	<pre><code>cp sharpbang-buster-10.2.3-amd64.hybrid.iso /dev/sdX ; sync</code></pre>
+	<pre><code>cp sharpbang-buster-10.2.4-amd64.hybrid.iso /dev/sdX ; sync</code></pre>
    </div>
 	<p>Replace <code>X</code> with the letter assigned to the USB stick, <b>do not</b> add a partition number.</p>
    <h4>Hard drive GRUB entry</h4>
