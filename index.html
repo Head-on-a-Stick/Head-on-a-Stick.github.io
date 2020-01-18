@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<meta charset="utf-8">
+<meta charset="UTF-8">
 <head>
-   <title>SharpBang GNU/Linux®</title>
-   <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
-   <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
-   <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+   <title>SharpBang GNU/Linux&reg;</title>
+   <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+   <link rel="icon" type="image/png" href="icons/favicon-32x32.png">
+   <link rel="icon" type="image/png" href="icons/favicon-16x16.png">
    <link rel="manifest" href="icons/site.webmanifest">
-   <link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#5bbad5">
+   <link rel="mask-icon" href="icons/safari-pinned-tab.svg">
    <meta name="msapplication-TileColor" content="#da532c">
    <meta name="theme-color" content="#ffffff">
-</head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
    body{
@@ -53,11 +52,12 @@
       max-width: 100%;
    }
 </style>
-<article>
-	<h1><a href="https://github.com/Head-on-a-Stick/Sharpbang">SharpBang GNU/Linux®</a></h1>
-   <a href="scrot.png"><img src="scrot.png" class="center"/></a>
+</head>
+<body>
+	<h1><a href="https://github.com/Head-on-a-Stick/Sharpbang">SharpBang GNU/Linux&reg;</a></h1>
+   <a href="scrot.png"><img src="scrot_small.png" class="center" alt="♯!" title="SharpBang"/></a>
 	<p><a href="https://travis-ci.com/Head-on-a-Stick/SharpBang"><img src="https://travis-ci.com/Head-on-a-Stick/SharpBang.svg?branch=master" alt="Build Status" title=""/></a></p>
-   <p>SharpBang (♯!) <a href="https://www.gnu.org">GNU</a>/<a href="https://kernel.org">Linux®</a> is a <a href="https://en.wikipedia.org/wiki/Live_CD">live ISO image</a> that can be used to install a pre-configured <a href="http://openbox.org">Openbox</a>/<a href="https://gitlab.com/o9000/tint2">Tint2</a> desktop running on <a href="https://www.debian.org">Debian</a> stable.</p>
+   <p>SharpBang (♯!) <a href="https://www.gnu.org">GNU</a>/<a href="https://kernel.org">Linux&reg;</a> is a <a href="https://en.wikipedia.org/wiki/Live_CD">live ISO image</a> that can be used to install a pre-configured <a href="http://openbox.org">Openbox</a>/<a href="https://gitlab.com/o9000/tint2">Tint2</a> desktop running on <a href="https://www.debian.org">Debian</a> stable.</p>
 	<p>The username for the live system is <code>user</code> and the password is <code>live</code>.</p>
    <p>The <a href="https://live-team.pages.debian.net/live-manual/">live-build</a> system is used to create the ISO, just like the official Debian images. A full suite of rescue &amp; recovery tools are included in the live environment and a rescue mode is accessible from the boot menu which can be used to open a shell in an installed system.</p>
    <p>Please note that SharpBang is not a distribution in the usual sense, the ISO image will install a pure Debian stable system with some pre-configuration.</p>
@@ -71,7 +71,7 @@
    <h3>Verifying the image</h3>
    <p>Download the ISO and matching sha512sum file, place them both in the current working directory then run this command (substitute <i>i386</i> in place of <i>amd64</i> for 32-bit images):
    <div style="border:none;width:auto;height:auto;overflow:auto;">
-   <pre><code>sha512sum -c sha512sum.amd64</code></pre>
+      <pre><code>sha512sum -c sha512sum.amd64</code></pre></div>
    <p>Expected output:</p>
    <div style="border:none;width:auto;height:auto;overflow:auto;">
    <pre><code>sharpbang-buster-10.2.6-amd64.hybrid.iso: OK</code></pre>
@@ -79,8 +79,7 @@
    <h3>Booting the image</h3>
 	<p>Use <code>cp</code> to transfer the image to a USB stick, for example:</p>
    <div style="border:none;width:auto;height:auto;overflow:auto;">
-	<pre><code>cp sharpbang-buster-10.2.6-amd64.hybrid.iso /dev/sdX ; sync</code></pre>
-   </div>
+	<pre><code>cp sharpbang-buster-10.2.6-amd64.hybrid.iso /dev/sdX ; sync</code></pre></div>
 	<p>Replace <code>X</code> with the letter assigned to the USB stick, <b>do not</b> add a partition number.</p>
    <h4>Hard drive GRUB entry</h4>
    <p>To add a GRUB boot menu entry for the ISO copy the image to <code>/usr/share/sharpbang/sharpbang.iso</code> then create a file at <code>/boot/grub/custom.cfg</code> with this content:</p>
@@ -90,12 +89,12 @@
    loopback loop (hd0,1)/$isofile                                             
    linux (loop)/live/vmlinuz boot=live config fromiso=/dev/sda1/$isofile toram  
    initrd (loop)/live/initrd.img                                              
-}</code></pre>
-   </div>
+}</code></pre></div>
    <p>Replace <code>hd0,1</code> &amp; <code>sda1</code> with the correct identifiers for the root partition.</p>
    <h3>Miscellaneous Links</h3>
 	<p><a href="/sids_page">Sid's page</a></p>
    <hr/>
-   <p>Last altered: 2020-01-16@20:10GMT</p>
-</article>
+   <p>Last altered: 2020-01-18@17:45GMT</p>
+</body>
+</html>
 # vim: ts=3 sw=3 et:
