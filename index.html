@@ -46,6 +46,10 @@
    xmp {
       font-family: monospace;
       font-size: 1rem;
+      border: none;
+      width: auto;
+      height: auto;
+      overflow: auto;
    }
    img {
       max-width: 100%;
@@ -69,26 +73,21 @@
    <p><a href="https://github.com/Head-on-a-Stick/SharpBang/releases/download/10.2.6+i386/sha512sum.i386">sha512sum.i386</a></p>
    <h3>Verifying the image</h3>
    <p>Download the ISO and matching sha512sum file, place them both in the current working directory then run this command (substitute <i>i386</i> in place of <i>amd64</i> for 32-bit images):
-   <div style="border:none;width:auto;height:auto;overflow:auto;">
-      <pre><code>sha512sum -c sha512sum.amd64</code></pre></div>
+      <pre><code>sha512sum -c sha512sum.amd64</code></pre>
    <p>Expected output:</p>
-   <div style="border:none;width:auto;height:auto;overflow:auto;">
    <pre><code>sharpbang-buster-10.2.6-amd64.hybrid.iso: OK</code></pre>
-   </div>
    <h3>Booting the image</h3>
 	<p>Use <code>cp</code> to transfer the image to a USB stick, for example:</p>
-   <div style="border:none;width:auto;height:auto;overflow:auto;">
-	<pre><code>cp sharpbang-buster-10.2.6-amd64.hybrid.iso /dev/sdX ; sync</code></pre></div>
+	<pre><code>cp sharpbang-buster-10.2.6-amd64.hybrid.iso /dev/sdX ; sync</code></pre>
 	<p>Replace <code>X</code> with the letter assigned to the USB stick, <b>do not</b> add a partition number.</p>
    <h4>Hard drive GRUB entry</h4>
    <p>To add a GRUB boot menu entry for the ISO copy the image to <code>/usr/share/sharpbang/sharpbang.iso</code> then create a file at <code>/boot/grub/custom.cfg</code> with this content:</p>
-   <div style="border:none;width:auto;height:auto;overflow:auto;">
    <pre><code>menuentry 'SharpBang (live)' {                                   
    isofile=usr/share/sharpbang/sharpbang.iso                                  
    loopback loop (hd0,1)/$isofile                                             
    linux (loop)/live/vmlinuz boot=live config fromiso=/dev/sda1/$isofile toram  
    initrd (loop)/live/initrd.img                                              
-}</code></pre></div>
+}</code></pre>
    <p>Replace <code>hd0,1</code> &amp; <code>sda1</code> with the correct identifiers for the root partition.</p>
    <h3>Miscellaneous Links</h3>
 	<p><a href="/sids_page">Sid's page</a></p>
