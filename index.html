@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<meta charset="UTF-8">
 <head>
    <title>SharpBang GNU/Linux</title>
    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
@@ -60,32 +59,34 @@
 </head>
 <body>
 	<h1><a href="https://github.com/Head-on-a-Stick/Sharpbang">SharpBang GNU/Linux</a></h1>
-   <a href="scrot.png"><img src="scrot.png" class="center" alt="♯!" title="SharpBang"/></a>
-	<p><a href="https://travis-ci.com/Head-on-a-Stick/SharpBang"><img src="https://travis-ci.com/Head-on-a-Stick/SharpBang.svg?branch=master" alt="Build Status" title=""/></a></p>
-   <p>SharpBang (♯!) <a href="https://www.gnu.org">GNU</a>/<a href="https://kernel.org">Linux</a> is a <a href="https://en.wikipedia.org/wiki/Live_CD">live ISO image</a> that can be used to install a pre-configured <a href="http://openbox.org">Openbox</a>/<a href="https://gitlab.com/o9000/tint2">Tint2</a> desktop running on <a href="https://www.debian.org">Debian</a> stable.</p>
+   <a href="scrot.png"><img src="scrot.png" class="center" alt="&#9839;!" title="SharpBang" height="auto" width="auto"/></a>
+	<p><a href="https://travis-ci.com/Head-on-a-Stick/SharpBang"><img src="https://travis-ci.com/Head-on-a-Stick/SharpBang.svg?branch=master" alt="Build Status" title="" height="auto" width="auto"/></a></p>
+   <p>SharpBang (&#9839;!) <a href="https://www.gnu.org">GNU</a>/<a href="https://kernel.org">Linux</a> is a <a href="https://en.wikipedia.org/wiki/Live_CD">live ISO image</a> that can be used to install a pre-configured <a href="http://openbox.org">Openbox</a>/<a href="https://gitlab.com/o9000/tint2">Tint2</a> desktop running on <a href="https://www.debian.org">Debian</a> stable.</p>
 	<p>The username for the live system is <code>user</code> and the password is <code>live</code>.</p>
-   <p>The <a href="https://live-team.pages.debian.net/live-manual/">live-build</a> system is used to create the ISO, just like the official Debian images, and a rescue mode is accessible from the boot menu which can be used to open a shell in an installed system.</p>
+   <p>Debian's <a href="https://live-team.pages.debian.net/live-manual/">live-build</a> system is used to create the ISO, just like the official images, and a rescue mode is accessible from the boot menu which can be used to open a shell in an installed system.</p>
+   <p>The default shell is <code><a href="http://www.mirbsd.org/mksh.htm">mksh</a></code>, use this command to revert back to <code><a href=https://www.gnu.org/software/bash/>bash</a></code> if preferred:
+   <pre><code>chsh -s /bin/bash</code></pre>
    <p>Please note that SharpBang is not a distribution in the usual sense, the ISO image will install a pure Debian stable system with some pre-configuration.</p>
    <h3>Download links</h3>
    <h4>64-bit x86:</h4>
-   <p><a href="https://github.com/Head-on-a-Stick/SharpBang/releases/download/10.3.7+amd64/sharpbang-buster-10.3.7-amd64.hybrid.iso">sharpbang-buster-10.3.7-amd64.hybrid.iso</a></p>
-   <p><a href="https://github.com/Head-on-a-Stick/SharpBang/releases/download/10.3.7+amd64/sha512sum.amd64">sha512sum.amd64</a></p>
+   <p><a href="https://github.com/Head-on-a-Stick/SharpBang/releases/download/10.3.8+amd64/sharpbang-buster-10.3.8-amd64.hybrid.iso">sharpbang-buster-10.3.8-amd64.hybrid.iso</a></p>
+   <p><a href="https://github.com/Head-on-a-Stick/SharpBang/releases/download/10.3.8+amd64/sha512sum.amd64">sha512sum.amd64</a></p>
    <h4>32-bit x86:</h4>
-	<p><a href="https://github.com/Head-on-a-Stick/SharpBang/releases/download/10.3.7-i386/sharpbang-buster-10.3.7-i386.hybrid.iso">sharpbang-buster-10.3.7-i386.hybrid.iso</a></p> 
-   <p><a href="https://github.com/Head-on-a-Stick/SharpBang/releases/download/10.3.7-i386/sha512sum.i386">sha512sum.i386</a></p>
+	<p><a href="https://github.com/Head-on-a-Stick/SharpBang/releases/download/10.3.8+i386/sharpbang-buster-10.3.8-i386.hybrid.iso">sharpbang-buster-10.3.8-i386.hybrid.iso</a></p> 
+   <p><a href="https://github.com/Head-on-a-Stick/SharpBang/releases/download/10.3.8+i386/sha512sum.i386">sha512sum.i386</a></p>
    <h3>Verifying the image</h3>
    <p>Download the ISO and matching sha512sum file, place them both in the current working directory then run this command (substitute <i>i386</i> in place of <i>amd64</i> for 32-bit images):
       <pre><code>sha512sum -c sha512sum.amd64</code></pre>
    <p>Expected output:</p>
-   <pre><code>sharpbang-buster-10.3.7-amd64.hybrid.iso: OK</code></pre>
+   <pre><code>sharpbang-buster-10.3.8-amd64.hybrid.iso: OK</code></pre>
    <h3>Burning the image</h3>
 	<p>Use <code>cp</code> to transfer the image to a USB stick, for example:</p>
-	<pre><code>cp sharpbang-buster-10.3.7-amd64.hybrid.iso /dev/sdX ; sync</code></pre>
+	<pre><code>cp sharpbang-buster-10.3.8-amd64.hybrid.iso /dev/sdX ; sync</code></pre>
 	<p>Replace <code>X</code> with the letter assigned to the USB stick, <b>do not</b> add a partition number.</p>
    <h3>Miscellaneous Links</h3>
 	<p><a href="/sids_page">Sid's page</a></p>
    <hr/>
-   <p>Last altered: 2020-04-20@16:36GMT</p>
+   <p>Last altered: 2020-04-25@19:17GMT</p>
 </body>
 </html>
 # vim: ts=3 sw=3 et:
