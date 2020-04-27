@@ -1,0 +1,46 @@
+body{
+   margin: auto;
+   max-width: 40em;
+   padding: 0.2em;
+   width: auto;
+   font: medium serif;
+   font-size: 1.2rem;
+   line-height: 1.5;
+	color: #bfbfbf;
+	background: #313233;
+}
+a {
+   color: #bfbfbf;
+   text-decoration: none;
+}
+a:visited {
+   color: #bfbfbf;
+   text-decoration: none;
+}
+a:hover, a:focus, a:active {
+   color: #bfbfbf;
+   text-decoration: underline;
+}
+h1 {
+   text-align: center;
+}
+h3 {
+   text-align: center;
+   border-top: solid 0.1rem #aaa;
+   border-bottom: solid 0.1rem #aaa;
+}
+pre,
+code,
+xmp {
+   font-family: monospace;
+   font-size: 1.2rem;
+   border: none;
+   width: auto;
+   height: auto;
+   overflow: auto;
+}
+img {
+   max-width: 100%;
+   width: auto;
+   height: auto;
+}
