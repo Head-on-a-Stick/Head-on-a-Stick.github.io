@@ -11,11 +11,11 @@ body{
 }
 a {
    color: #bfbfbf;
-   text-decoration: none;
+   text-decoration: underline;
 }
 a:visited {
    color: #bfbfbf;
-   text-decoration: none;
+   text-decoration: underline;
 }
 a:hover, a:focus, a:active {
    color: #bfbfbf;

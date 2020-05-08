@@ -24,24 +24,27 @@
    <p>Please note that SharpBang is not a distribution in the usual sense, the ISO image will install a pure Debian stable system with some pre-configuration.</p>
    <h3>Download links</h3>
    <h4>64-bit x86:</h4>
-   <p><a href="https://github.com/Head-on-a-Stick/SharpBang/releases/download/10.3.9+1+amd64/sharpbang-buster-10.3.9-amd64.hybrid.iso">sharpbang-buster-10.3.9-amd64.hybrid.iso</a></p>
-   <p><a href="https://github.com/Head-on-a-Stick/SharpBang/releases/download/10.3.9+amd64/sha512sum.amd64">sha512sum.amd64</a></p>
+   <p><a href="https://github.com/Head-on-a-Stick/SharpBang/releases/download/10.3.10+amd64/sharpbang-buster-10.3.10-amd64.hybrid.iso">sharpbang-buster-10.3.10-amd64.hybrid.iso</a></p>
+   <p><a href="https://github.com/Head-on-a-Stick/SharpBang/releases/download/10.3.10+amd64/sha512sum.amd64">sha512sum.amd64</a></p>
    <h4>32-bit x86:</h4>
-	<p><a href="https://github.com/Head-on-a-Stick/SharpBang/releases/download/10.3.9+i386/sharpbang-buster-10.3.9-i386.hybrid.iso">sharpbang-buster-10.3.9-i386.hybrid.iso</a></p> 
-   <p><a href="https://github.com/Head-on-a-Stick/SharpBang/releases/download/10.3.9+i386/sha512sum.i386">sha512sum.i386</a></p>
+	<p><a href="https://github.com/Head-on-a-Stick/SharpBang/releases/download/10.3.10+i386/sharpbang-buster-10.3.10-i386.hybrid.iso">sharpbang-buster-10.3.10-i386.hybrid.iso</a></p> 
+   <p><a href="https://github.com/Head-on-a-Stick/SharpBang/releases/download/10.3.10+i386/sha512sum.i386">sha512sum.i386</a></p>
    <h3>Verifying the image</h3>
    <p>Download the ISO and matching sha512sum file, place them both in the current working directory then run this command (substitute <i>i386</i> in place of <i>amd64</i> for 32-bit images):
       <pre><code>sha512sum -c sha512sum.amd64</code></pre>
    <p>Expected output:</p>
-   <pre><code>sharpbang-buster-10.3.9-amd64.hybrid.iso: OK</code></pre>
+   <pre><code>sharpbang-buster-10.3.10-amd64.hybrid.iso: OK</code></pre>
    <h3>Burning the image</h3>
 	<p>Use <code>cp</code> to transfer the image to a USB stick, for example:</p>
-	<pre><code>cp sharpbang-buster-10.3.9-amd64.hybrid.iso /dev/sdX ; sync</code></pre>
+	<pre><code>cp sharpbang-buster-10.3.10-amd64.hybrid.iso /dev/sdX ; sync</code></pre>
 	<p>Replace <code>X</code> with the letter assigned to the USB stick, <b>do not</b> add a partition number.</p>
+   <h3>Updating an installed system</h3>
+   <p>To update the configuration in an installed system download the latest version of the <i>sharp-configs</i> package from <a href="https://software.opensuse.org//download.html?project=home%3AHead_on_a_Stick%3Asharpbang&package=sharp-configs">here</a>. Any changes in the package will only be applied to newly-created users by default. To apply the changes to the current user run this command:</p>
+   <pre><code>sharp-user-setup --refresh</code></pre>
    <h3>Miscellaneous Links</h3>
 	<p><a href="/sids_page">Sid's page</a></p>
    <hr/>
-   <p>Last altered: 2020-05-02@00:13GMT</p>
+   <p>Last altered: 2020-05-08@15:54GMT</p>
 </body>
 </html>
 # vim: ts=3 sw=3 et:
